@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Rollón</title>
+    <!--
+      This page defines a single‑page portfolio for an actor or artista.  The layout
+      follows a white/grey/black colour palette and is structured with a fixed
+      navigation bar, a hero banner, sections describing the performer’s
+      background (Trayectoria), a portfolio carousel, a videobook and a contact
+      area.  Colours were selected to maximise contrast and readability as
+      recommended by the U.S. Web Design System, which notes that high contrast
+      combinations such as white text on a dark background are comfortable for
+      most audiences【748747147475946†L360-L372】.  The navigation menu uses a
+      drop‑down (fly‑out) for the “Trayectoria” section and follows guidance
+      from the W3C Web Accessibility Initiative: fly‑out menus should have
+      alternative ways to access sub‑items and submenus should be clearly
+      indicated and operable by keyboard【962859713340230†L96-L104】.  In the
+      portfolio area we provide manual controls; carousels should not move
+      automatically and must be navigable by keyboard users【926944112480049†L114-L123】.
+    -->
+    <!-- Font Awesome for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pQ4yv+4Y3nOztWh0zWWDUhEwAi3RBhmYhH1JIuOgRCmJKiXafZyRl2M6OuWqm5ZPNn+GQR+2Jg/lU5urhNyx6w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Skip link for screen reader users -->
+    <a href="#inicio" class="skip-link">Ir al contenido principal</a>
+
+    <header>
+      <nav class="navbar" aria-label="Principal">
+        <div class="nav-left">
+          <!-- Site title/logo; can be replaced with an image if desired -->
+          <a href="#inicio" class="brand">Bruno&nbsp;Rollón</a>
+        </div>
+        <button class="menu-toggle" aria-label="Menú" aria-expanded="false" aria-controls="navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="navigation">
+          <li><a href="#inicio">Inicio</a></li>
+          <li class="has-submenu">
+            <!-- toggle button for submenu; using button ensures assistive
+                 technologies announce state correctly as recommended by W3C【962859713340230†L117-L123】 -->
+            <button
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="trayectoria-submenu"
+              class="submenu-toggle"
+            >
+              Trayectoria<span class="caret" aria-hidden="true">▼</span>
+            </button>
+            <ul class="submenu" id="trayectoria-submenu">
+              <li><a href="#formacion">Formación</a></li>
+              <li><a href="#experiencia">Cine & TV</a></li>
+              <li><a href="#destacados">Teatro</a></li>
+            </ul>
+          </li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#videobook">Videobook</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <!-- Hero / Presentación -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Bruno Rollón Campos</h1>
+          <p>
+            Bienvenido a mi espacio creativo. Aquí podrás conocer mi trayectoria,
+            descubrir mi portfolio, ver mi videobook y ponerte en contacto
+            conmigo.
+          </p>
+          <a href="#contacto" class="cta-button">Contáctame</a>
+        </div>
+        <div class="hero-image">
+          <!-- You can replace src with a relative path to your own image -->
+          <img src="cached_assets_used/hero.jpeg" alt="Silueta artística de actor" />
+        </div>
+      </section>
+
+      <!-- Trayectoria Section -->
+      <section id="trayectoria" class="trayectoria-section">
+        <h2>Trayectoria</h2>
+        <!-- Formación -->
+        <article id="formacion" class="trayectoria-item">
+          <h3 class="trayectoria-title">Formación</h3>
+          <div class="trayectoria-image">
+            <!-- Imagen centrada; sustituye la ruta por tu propio gráfico o diploma -->
+            <img
+              src="cached_assets_used/portfolio1.png"
+              alt="Imagen representativa de la formación"
+            />
+          </div>
+        </article>
+
+        <!-- Experiencia -->
+        <article id="experiencia" class="trayectoria-item">
+          <h3 class="trayectoria-title">Experiencia</h3>
+          <div class="trayectoria-image">
+            <img
+              src="cached_assets_used/portfolio2.png"
+              alt="Imagen representativa de la experiencia profesional"
+            />
+          </div>
+        </article>
+
+        <!-- Destacados / Premios -->
+        <article id="destacados" class="trayectoria-item">
+          <h3 class="trayectoria-title">Destacados</h3>
+          <div class="trayectoria-image">
+            <img
+              src="cached_assets_used/portfolio3.png"
+              alt="Imagen representativa de logros y premios"
+            />
+          </div>
+        </article>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title">Portfolio</h2>
+        <p class="portfolio-instructions visually-hidden">
+          Bienvenido a mi espacio creativo. Aquí podrás conocer mi trayectoria,
+            descubrir mi portfolio, ver mi videobook y ponerte en contacto
+            conmigo.
+        </p>
+        <div class="carousel" role="region" aria-label="Galería de imágenes del portfolio">
+          <button class="carousel-control prev" aria-label="Anterior">&#10094;</button>
+          <div class="carousel-track-container">
+            <!--
+              The carousel track will be dynamically populated by script.js.  At
+              load time we extract the image sources from the original list
+              items and then rebuild the track to always display exactly
+              three items: the previous slide, the current slide and the
+              next slide.  This approach ensures the central slide remains
+              anchored in the middle and prevents partially visible extra
+              slides from showing, which addresses the issue described by
+              the user.  The original list items are kept here as a
+              fallback in case JavaScript is disabled; they will be
+              removed at runtime for the enhanced experience.
+            -->
+            <ul class="carousel-track">
+              <li class="carousel-item"><img src="cached_assets_used/portfolio5.jpeg" alt="Portafolio 1" /></li>
+              <li class="carousel-item"><img src="cached_assets_used/portfolio6.jpeg" alt="Portafolio 2" /></li>
+              <li class="carousel-item"><img src="cached_assets_used/portfolio7.jpeg" alt="Portafolio 3" /></li>
+              <li class="carousel-item"><img src="cached_assets_used/portfolio8.jpeg" alt="Portafolio 4" /></li>
+              <li class="carousel-item"><img src="cached_assets_used/hero.jpeg" alt="Portafolio 5" /></li>
+            </ul>
+          </div>
+          <button class="carousel-control next" aria-label="Siguiente">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- Videobook Section -->
+      <section id="videobook" class="videobook-section">
+        <h2>Videobook</h2>
+        <p>
+          Bienvenido a mi espacio creativo. Aquí podrás conocer mi trayectoria,
+            descubrir mi portfolio, ver mi videobook y ponerte en contacto
+            conmigo.
+        </p>
+        <video
+          controls
+          preload="metadata"
+          aria-label="Reproductor de videobook"
+        >
+          <!-- El vídeo no está incluido; actualiza la ruta al archivo en src -->
+          <source src="cached_assets_used/videos/videobook.mp4" type="video/mp4" />
+          Tu navegador no admite la reproducción de vídeo.
+        </video>
+      </section>
+
+      <!-- Contacto Section -->
+      <section id="contacto" class="contact-section">
+        <h2>Contactar</h2>
+        <p class="contact-intro">
+          Ponte en contacto conmigo a través de mis redes sociales o mediante
+          el formulario siguiente. Todos los campos marcados con <span
+            class="required"
+            aria-hidden="true"
+            >*</span
+          > son obligatorios. Proporciono instrucciones antes del formulario
+          siguiendo las recomendaciones de accesibilidad para que los lectores de
+          pantalla encuentren más fácilmente la información.
+        </p>
+        <div class="social-links">
+          <!-- Instagram link with icon and handle -->
+          <div class="social-item">
+            <a href="https://www.instagram.com/brunorolloncampos" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+              <span class="icon-circle">
+                <img src="cached_assets_used/instagram.png" alt="Logo de Instagram" class="icon-image" />
+              </span>
+              <span class="social-handle">@brunorolloncampos</span>
+            </a>
+          </div>
+          <!-- TikTok link with icon and handle -->
+          <div class="social-item">
+            <a href="https://www.tiktok.com/@brunorollon" target="_blank" rel="noopener" aria-label="TikTok" class="social-link">
+              <span class="icon-circle">
+                <img src="cached_assets_used/tiktok.png" alt="Logo de TikTok" class="icon-image" />
+              </span>
+              <span class="social-handle">@brunorollon</span>
+            </a>
+          </div>
+          <!-- Placeholder for additional social network -->
+          <div class="social-item">
+              <span class="icon-circle">
+                <img src="cached_assets_used/phone.jpg" alt="Teléfono" class="icon-image" />
+              </span>
+              <span class="social-handle">(+34) 678 636 789 <br> (+34) 895 689 594</span>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <form id="contact-form" novalidate aria-describedby="form-instructions">
+          <div id="form-instructions" class="visually-hidden">
+            Rellena el asunto y tu mensaje y pulsa en «Enviar» para abrir tu cliente de
+            correo con estos campos autocompletados. Todos los campos son obligatorios.
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto <span class="required" aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="asunto"
+              name="asunto"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje <span class="required" aria-hidden="true">*</span></label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+          <div class="form-group submit-container">
+            <button type="submit" class="submit-button">Enviar</button>
+          </div>
+        </form>
+      </section>
+
+      <!--
+        Modal overlay for enlarged portfolio images.  When the user clicks
+        on the central image in the carousel, this overlay becomes
+        visible, displaying the selected image at a larger size.  Clicking
+        anywhere outside the image closes the overlay and restores the
+        carousel view.  The overlay is initially hidden via CSS.
+      -->
+      <div id="image-modal" class="image-modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-label="Vista ampliada de la imagen" tabindex="-1">
+          <img src="" alt="Imagen ampliada del portfolio" />
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
