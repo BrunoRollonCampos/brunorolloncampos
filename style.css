@@ -230,6 +230,7 @@ header {
   text-align: justify;
   gap: 1rem;
   margin-bottom: 3rem;
+  
 }
 /* Optional modifier class remains unused but kept for backward compatibility */
 .trayectoria-item.reverse {
@@ -242,7 +243,7 @@ header {
 }
 .trayectoria-image {
   width: 100%;
-  max-width: 60%;
+  max-width: 70%;
   display: flex;
   justify-content: center;
   text-align: justify;
