@@ -242,15 +242,26 @@ header {
 }
 .trayectoria-image {
   width: 100%;
+  max-width: 60%;
   display: flex;
   justify-content: center;
+  text-align: justify;
+  white-space: normal;     /* permite saltos de línea */
+  word-wrap: break-word;   /* compatibilidad */
+  overflow-wrap: break-word;
 }
+.listado li {
+    margin-bottom: 30px; /* espacio entre ítems */
+    line-height: 1.5;    /* mejora la legibilidad */
+    
+  }
 .trayectoria-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
   height: auto;
   object-fit: contain;
   border-radius: 8px;
+  
 }
 
 /* Portfolio Section */
