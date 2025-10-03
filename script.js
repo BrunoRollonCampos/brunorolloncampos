@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     // Define recipient(s) – actual email addresses should be set by the site owner
-    const recipients = ['tu_email@ejemplo.com'];
+    const recipients = ['brunorolloncampos@gmail.com'];
     const subject = encodeURIComponent(asunto);
     const body = encodeURIComponent(mensaje);
     // Compose the mailto link

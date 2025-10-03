@@ -59,12 +59,11 @@
               Trayectoria<span class="caret" aria-hidden="true">▼</span>
             </button>
             <ul class="submenu" id="trayectoria-submenu">
-              <li><a href="#formacion">Formación</a></li>
-              <li><a href="#experiencia">Cine & TV</a></li>
-              <li><a href="#destacados">Teatro</a></li>
+              <li><a href="#formacion">Formación Actoral</a></li>
+              <li><a href="#experiencia">Experiencia</a></li>
             </ul>
           </li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#portfolio">Galería</a></li>
           <li><a href="#videobook">Videobook</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -78,7 +77,7 @@
           <h1>Bruno Rollón Campos</h1>
           <p>
             Bienvenido a mi espacio creativo. Aquí podrás conocer mi trayectoria,
-            descubrir mi portfolio, ver mi videobook y ponerte en contacto
+            descubrir mi galería, ver mi videobook y ponerte en contacto
             conmigo.
           </p>
           <a href="#contacto" class="cta-button">Contáctame</a>
@@ -94,13 +93,44 @@
         <h2>Trayectoria</h2>
         <!-- Formación -->
         <article id="formacion" class="trayectoria-item">
-          <h3 class="trayectoria-title">Formación</h3>
+          <h3 class="trayectoria-title">Formación Actoral</h3>
           <div class="trayectoria-image">
-            <!-- Imagen centrada; sustituye la ruta por tu propio gráfico o diploma -->
-            <img
-              src="cached_assets_used/portfolio1.png"
-              alt="Imagen representativa de la formación"
-            />
+            <table border="1" cellspacing="0" cellpadding="6">
+              <thead>
+                <tr>
+                  <th>Año</th>
+                  <th>Estudios</th>
+                  <th>Centro</th>
+                  <th>Ciudad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025 – (Actualmente)</td>
+                  <td>Formación Superior en Técnicas de Actuación Teatral</td>
+                  <td>Estudi Laura Jou</td>
+                  <td>Barcelona</td>
+                </tr>
+                <tr>
+                  <td>2023 – (Actualmente)</td>
+                  <td>Grado en Enseñanzas Artísticas Superiores de Arte Dramático</td>
+                  <td>EÒLIA</td>
+                  <td>Barcelona</td>
+                </tr>
+                <tr>
+                  <td>2025</td>
+                  <td>Coaching actoral con Isaac Alcayde (Nivel 1)</td>
+                  <td>Eden Estudio</td>
+                  <td>Barcelona</td>
+                </tr>
+                <tr>
+                  <td>2021 – 2023</td>
+                  <td>Ciclo Superior en Técnicas de Actuación Teatral</td>
+                  <td>El Galliner</td>
+                  <td>Girona</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </article>
 
@@ -108,34 +138,65 @@
         <article id="experiencia" class="trayectoria-item">
           <h3 class="trayectoria-title">Experiencia</h3>
           <div class="trayectoria-image">
-            <img
-              src="cached_assets_used/portfolio2.png"
-              alt="Imagen representativa de la experiencia profesional"
-            />
-          </div>
-        </article>
-
-        <!-- Destacados / Premios -->
-        <article id="destacados" class="trayectoria-item">
-          <h3 class="trayectoria-title">Destacados</h3>
-          <div class="trayectoria-image">
-            <img
-              src="cached_assets_used/portfolio3.png"
-              alt="Imagen representativa de logros y premios"
-            />
+            <table border="1" cellspacing="0" cellpadding="6">
+              <thead>
+                <tr>
+                  <th>Año</th>
+                  <th>Título</th>
+                  <th>Dirección / Producción</th>
+                  <th>Formato</th>
+                  <th>Rol</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025</td>
+                  <td><em>Historias del frente: El paseo</em></td>
+                  <td>Dir. Alberto González<br>Prod. ESCAC</td>
+                  <td>Cortometraje</td>
+                  <td>Protagonista: Lesmes, refugiado de guerra</td>
+                </tr>
+                <tr>
+                  <td>2024</td>
+                  <td><em>Gamberra</em></td>
+                  <td>Dir. Marine Auclair<br>Prod. ESCAC</td>
+                  <td>Cortometraje</td>
+                  <td>Actor de reparto: Jesús, estudiante de la RASE</td>
+                </tr>
+                <tr>
+                  <td>2024</td>
+                  <td><em>La Sopa</em></td>
+                  <td>Dir. Arnau Martinez<br>Prod. ESCAC</td>
+                  <td>Cortometraje</td>
+                  <td>Protagonista: Aron, productor de música</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td><em>HANOI!</em></td>
+                  <td>Dir. Dan Bravo<br>Prod. BRL FILMS</td>
+                  <td>Cortometraje</td>
+                  <td>Protagonista: Narcís o “Siset”, joven campesino</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td><em>Creatura</em></td>
+                  <td>Dir. Elena Martín<br>Prod. AVALON<br>Cine Catalán</td>
+                  <td>Largometraje</td>
+                  <td>
+                    Actor de reparto: Trabajador/monitor de barca a pedales<br>
+                    <small>Mejor film europeo Cannes 2023. 6 Premios Gaudí en 2024.</small>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </article>
       </section>
 
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio-section" aria-labelledby="portfolio-title">
-        <h2 id="portfolio-title">Portfolio</h2>
-        <p class="portfolio-instructions visually-hidden">
-          Bienvenido a mi espacio creativo. Aquí podrás conocer mi trayectoria,
-            descubrir mi portfolio, ver mi videobook y ponerte en contacto
-            conmigo.
-        </p>
-        <div class="carousel" role="region" aria-label="Galería de imágenes del portfolio">
+        <h2 id="portfolio-title">Galería</h2>
+        <div class="carousel" role="region" aria-label="Galería de imágenes">
           <button class="carousel-control prev" aria-label="Anterior">&#10094;</button>
           <div class="carousel-track-container">
             <!--
@@ -166,9 +227,7 @@
       <section id="videobook" class="videobook-section">
         <h2>Videobook</h2>
         <p>
-          Bienvenido a mi espacio creativo. Aquí podrás conocer mi trayectoria,
-            descubrir mi portfolio, ver mi videobook y ponerte en contacto
-            conmigo.
+          
         </p>
         <video
           controls
@@ -205,6 +264,7 @@
             </a>
           </div>
           <!-- TikTok link with icon and handle -->
+           <!--
           <div class="social-item">
             <a href="https://www.tiktok.com/@brunorollon" target="_blank" rel="noopener" aria-label="TikTok" class="social-link">
               <span class="icon-circle">
@@ -213,18 +273,19 @@
               <span class="social-handle">@brunorollon</span>
             </a>
           </div>
+          -->
           <!-- Placeholder for additional social network -->
           <div class="social-item">
               <span class="icon-circle">
-                <img src="cached_assets_used/phone.jpg" alt="Teléfono" class="icon-image" />
+                <img src="cached_assets_used/phone.png" alt="Teléfono" class="icon-image" />
               </span>
-              <span class="social-handle">(+34) 678 636 789 <br> (+34) 895 689 594</span>
+              <span class="social-handle">(+34) 635 74 35 73</span>
           </div>
         </div>
         <!-- Contact Form -->
         <form id="contact-form" novalidate aria-describedby="form-instructions">
           <div id="form-instructions" class="visually-hidden">
-            Rellena el asunto y tu mensaje y pulsa en «Enviar» para abrir tu cliente de
+            Rellena el asunto y tu mensaje, y pulsa en «Enviar» para abrir tu cliente de
             correo con estos campos autocompletados. Todos los campos son obligatorios.
           </div>
           <div class="form-group">
@@ -262,13 +323,13 @@
       -->
       <div id="image-modal" class="image-modal" aria-hidden="true">
         <div class="modal-content" role="dialog" aria-label="Vista ampliada de la imagen" tabindex="-1">
-          <img src="" alt="Imagen ampliada del portfolio" />
+          <img src="" alt="Imagen ampliada de la galería." />
         </div>
       </div>
     </main>
 
     <footer>
-      <p>© 2025 Tu Nombre. Todos los derechos reservados.</p>
+      <p>© 2025 Bruno Rollón Campos. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
